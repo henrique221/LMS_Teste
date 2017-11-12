@@ -1,13 +1,12 @@
 
 
 
-from django.conf.urls import patterns, url
-from app import views
+from django.conf.urls import url
+from app.views import home, login
 
-urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', 'app.views.home', name='home'),
-    url(r'^login/$', 'app.views.login', name='login'),
+urlpatterns = (
+    url(r'^$', home, name='home'),
+    url(r'^login/$', login, name='login')
 
 
     # Uncomment the admin/doc line below to enable admin documentation:
