@@ -1,0 +1,32 @@
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Gerenciador de vestibulares</h1>
+    <p class="lead">Gerencie seus vestibulares.</p>
+    <!--<p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Lista de cursos</h2>
+        <p>
+            Lista os cursos que poderão participar dos seus vestibulares.
+        </p>
+        <p><a class="btn btn-default" href="{% url 'lista_cursos' %}">Acessar &raquo;</a></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Lista de vestibulares</h2>
+        <p>Veja os vestibulares cadastrados.</p>
+        <p><a class="btn btn-default" href="{% url 'lista_vestibulares' %}">Acessar &raquo;</a></p>
+        <!-- <p><a class="btn btn-default">Em construção &raquo;</a></p> -->
+    </div>
+    <div class="col-md-4">
+        <h2>Lista de candidatos</h2>
+        <p>Veja os candidatos inscritos nos vestibulares.</p>
+        <p><a class="btn btn-default" href="{% url 'lista_candidatos' %}">Acessar &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
