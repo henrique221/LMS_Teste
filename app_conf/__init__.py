@@ -1,3 +1,3 @@
 """
-Package for django_get_started.
+Package for app_conf.
 """
