@@ -11,7 +11,7 @@ class Perfil(models.Model):
 
 
 
-class Usuarios(models.Model):
+class Usuario(models.Model):
     USR_IdRA = models.IntegerField(primary_key=True)
     USR_DssNome = models.CharField(max_length=70)
     USR_DssSenha = models.CharField(max_length=12)
