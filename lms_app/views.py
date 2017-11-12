@@ -5,7 +5,7 @@ Definition of views.
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
-from app.models import Curso, Vestibular, Candidato
+from lms_app.models import *
 from datetime import datetime
 
 def home(request):
@@ -16,8 +16,10 @@ def home(request):
         'app/index.html',
         context_instance = RequestContext(request,
         {
-            'title':'Home Page',
-            'year':datetime.now().year,
+            'title': 'Home Page',
+            'Usuario': Usuario.USR_IdRA,
+            'Senha': Usuario.USR_DssSenha,
+            'year': datetime.now().year,
         })
     )
 
