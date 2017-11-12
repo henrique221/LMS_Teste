@@ -5,21 +5,15 @@ Definition of models.
 from django.db import models
 
 # Create your models here.
-class Curso(models.Model):
-    nome = models.CharField(max_length=200)
-    periodo = models.CharField(max_length=50)
-    instituicao = models.CharField(max_length=200)
+class Perfil(models.Model):
+    PRF_IdPerfil = models.IntegerField(primary_key=True)
+    PRF_DssPerfil = models.CharField(max_length=30)
 
-class Vestibular(models.Model):
-    nome = models.CharField(max_length=200)
-
-
-class Candidato(models.Model):
-    nome = models.CharField(max_length=200)
-    rg = models.IntegerField()
-    cpf = models.IntegerField()
-    endereco = models.CharField(max_length=200)
-    telefone = models.IntegerField()
+class Usuario(models.Model):
+    USR_IdRA = models.IntegerField(primary_key=True)
+    USR_DssNome_completo = models.CharField(max_length=70)
+    USR_DssSenha = models.CharField(max_length=20)
+    USR_IdPerfil = models.ForeignKey(Perfil)
 
 
 
